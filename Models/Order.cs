@@ -17,6 +17,8 @@ public class Order
 	public string service { get;  private set; }
 	public int value { get;  private set; }
 	public string endDate { get; private set; }
+
+	public string expirationDate  { get; private set;}
 	public int subscriptionId { get; private set; }
 
 	public string status { get; private set; }
@@ -25,9 +27,10 @@ public class Order
 		 
     public DateTime updatedAt { get; set; }
 	
-		public Order(string service, int value, string endDate, int subscriptionId	)
+		public Order(string service, int value, string endDate, int subscriptionId, string expirationDate	)
 		{
 			this.service = service;
+			this.expirationDate = expirationDate;
 			this.value = value;
 			this.subscriptionId = subscriptionId;
 			this.status = "pending";

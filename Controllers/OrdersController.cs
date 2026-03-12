@@ -23,9 +23,19 @@ namespace ConnectPayII.Controllers
         [HttpPost]
         public IActionResult Add(OrderViewModel orderViewModel)
         {
-            var order = new Order(orderViewModel.service, orderViewModel.value, orderViewModel.endDate, orderViewModel.subscriptionId);
+            var order = new Order(orderViewModel.service, orderViewModel.value, orderViewModel.endDate, orderViewModel.subscriptionId, orderViewModel.expirationDate);
            
             _orderRepository.Add(order);
+            return Ok(order);
+        }
+
+        public IActionResult GetResult(OrderViewModel orderViewModel)
+        {
+            var order = _orderRepository.GetOrderById(orderViewModel.id);
+            if(order == null)
+            {
+                return NotFound();
+            }
             return Ok(order);
         }
     }

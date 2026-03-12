@@ -8,11 +8,14 @@ namespace ConnectPayII.ViewModel
 {
     public class OrderViewModel
     {
-        public string service { get; set; }
-        public int value { get; set; }
+      public int id { get;  set; }
+      public required string service { get;   set; }
+	  public required int value { get;   set; }
+	  public required string endDate { get; set; }
 
-        public string endDate { get; set; }
+	  public required string expirationDate  { get;  set;}
+	  public required int subscriptionId { get;  set; }
 
-        public int subscriptionId { get; set; }
+	  public required string status { get;  set; }
     }
 }
