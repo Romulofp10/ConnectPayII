@@ -26,9 +26,28 @@ namespace ConnectPayII.Data
             return _context.Orders.Find(id);
         }
 
-        public void Update(Order order)
+        public Order  Update(Order order)
         {
+            var existingOrder = _context.Orders.Find(order.id);
+            if (existingOrder == null)
+            {
+                throw new ArgumentException("Order not found");
+            }
+
+
             _context.Orders.Update(order);
+            _context.SaveChanges();
+        }
+        
+        public void Delete(int id)
+        {
+            var order = _context.Orders.Find(id);
+            if (order == null)
+            {
+                throw new ArgumentException("Order not found");
+            }
+            
+            _context.Orders.Remove(order);
             _context.SaveChanges();
         }
     }

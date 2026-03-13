@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
+using ConnectPayII.ViewModel;
 
 namespace ConnectPayII.Models
 {
@@ -14,6 +15,8 @@ public class Order
 {
 		[Key]
 	public int id { get;  private set; }
+
+	public int slug { get; set; }
 	public string service { get;  private set; }
 	public int value { get;  private set; }
 	public string endDate { get; private set; }
@@ -21,7 +24,9 @@ public class Order
 	public string expirationDate  { get; private set;}
 	public int subscriptionId { get; private set; }
 
-	public string status { get; private set; }
+	public int customerId { get; set; }
+
+	public OrderStatus status { get; private set; }
 
     public DateTime createdAt { get; set; }
 		 
@@ -38,6 +43,8 @@ public class Order
 			this.createdAt = DateTime.Now;
 			this.updatedAt = DateTime.Now;
 		}
+
+		
 
 }
 }

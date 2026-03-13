@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ConnectPayII")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bdaaef837094983dc1cd3bbf847dc11fc170edeb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+11f4c9536b2e092f34a5792def8fcb58987f6f89")]
 [assembly: System.Reflection.AssemblyProductAttribute("ConnectPayII")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ConnectPayII")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

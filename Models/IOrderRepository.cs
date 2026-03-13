@@ -8,10 +8,12 @@ namespace ConnectPayII.Models
     public interface IOrderRepository
     {
         void Add(Order order);
-        void Update(Order order);
+        Order Update(Order order);
 
         List<Order> GetAll();
 
         Order GetOrderById(int id);
+
+
     }
 }
